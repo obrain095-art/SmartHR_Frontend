@@ -6,7 +6,7 @@ import {
   Trash2, Archive, RefreshCw, CheckCircle2, LayoutDashboard
 } from 'lucide-react';
 
-const API_BASE = 'https://ai-recruiting.onrender.com';
+const API_BASE = 'https://smarthr-9qi3.onrender.com';
 
 // --- UTILS ---
 const apiRequest = async (endpoint, method = 'GET', body = null, isFormData = false) => {
