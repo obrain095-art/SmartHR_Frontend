@@ -345,7 +345,7 @@ export default function App() {
     <aside className="w-72 bg-white border-r border-slate-200 flex flex-col fixed h-full shadow-sm">
       <div className="p-8 flex items-center gap-3">
         <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white"><Sparkles size={20} /></div>
-        <span className="font-black text-xl tracking-tight">RecruitAI</span>
+        <span className="font-black text-xl tracking-tight">SmartHR</span>
       </div>
       <nav className="flex-1 px-4 space-y-1">
         <button onClick={() => { setView('dashboard'); loadRecruiterDashboard(); }} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold transition ${view === 'dashboard' ? 'bg-blue-50 text-blue-600' : 'text-slate-500 hover:bg-slate-50'}`}>
