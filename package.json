@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "ai-recruiting-frontend",
+=======
+  "name": "SmartHR_Frontend",
+>>>>>>> eeb8d04d9a6dc05a522b66841f1dd49b88835e8d
   "private": true,
   "version": "1.0.0",
   "type": "module",

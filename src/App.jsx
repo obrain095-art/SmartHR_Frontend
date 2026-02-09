@@ -3,10 +3,17 @@ import {
   Users, Briefcase, FileText, MessageCircle, ChevronRight,
   Sparkles, Clock, Upload, ArrowLeft, Send, XCircle,
   LogOut, Plus, Link as LinkIcon, AlertCircle, Loader2,
+<<<<<<< HEAD
   Trash2, Archive, RefreshCw, CheckCircle2, LayoutDashboard, BarChart2
 } from 'lucide-react';
 
 const API_BASE = 'https://ai-recruiting-4l5g.onrender.com';
+=======
+  Trash2, Archive, RefreshCw, CheckCircle2, LayoutDashboard
+} from 'lucide-react';
+
+const API_BASE = 'https://smarthr-9qi3.onrender.com';
+>>>>>>> eeb8d04d9a6dc05a522b66841f1dd49b88835e8d
 
 // --- UTILS ---
 const apiRequest = async (endpoint, method = 'GET', body = null, isFormData = false) => {
@@ -81,7 +88,10 @@ export default function App() {
   const [selectedApp, setSelectedApp] = useState(null);
   const [aiData, setAiData] = useState(null);
   const [templates, setTemplates] = useState([]);
+<<<<<<< HEAD
   const [dashboardStats, setDashboardStats] = useState([]);
+=======
+>>>>>>> eeb8d04d9a6dc05a522b66841f1dd49b88835e8d
 
   const [formData, setFormData] = useState({});
   const [authMode, setAuthMode] = useState('login');
@@ -122,6 +132,7 @@ export default function App() {
   };
 
   // --- RECRUITER ACTIONS ---
+<<<<<<< HEAD
   const loadDashboardOverview = async () => {
     const targetId = user?.id;
     if (!targetId) return;
@@ -164,6 +175,8 @@ export default function App() {
     }
   };
 
+=======
+>>>>>>> eeb8d04d9a6dc05a522b66841f1dd49b88835e8d
   const loadRecruiterDashboard = async (userId) => {
     const targetId = userId || user?.id;
     if (!targetId) return;
@@ -335,7 +348,10 @@ export default function App() {
 
   useEffect(() => {
     if (user?.role === 'recruiter') {
+<<<<<<< HEAD
       if (view === 'overview') loadDashboardOverview();
+=======
+>>>>>>> eeb8d04d9a6dc05a522b66841f1dd49b88835e8d
       if (view === 'dashboard') loadRecruiterDashboard();
       if (view === 'templates') loadTemplates();
     }
@@ -355,7 +371,11 @@ export default function App() {
               <Sparkles size={32} />
             </div>
           </div>
+<<<<<<< HEAD
           <h1 className="text-3xl font-black text-center text-slate-900 mb-2">Smart HR</h1>
+=======
+          <h1 className="text-3xl font-black text-center text-slate-900 mb-2">Recruit AI</h1>
+>>>>>>> eeb8d04d9a6dc05a522b66841f1dd49b88835e8d
           <p className="text-slate-500 text-center mb-8">Система автоматизации найма</p>
 
           <div className="flex bg-slate-100 p-1.5 rounded-xl mb-6">
@@ -389,6 +409,7 @@ export default function App() {
     <aside className="w-72 bg-white border-r border-slate-200 flex flex-col fixed h-full shadow-sm">
       <div className="p-8 flex items-center gap-3">
         <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white"><Sparkles size={20} /></div>
+<<<<<<< HEAD
         <span className="font-black text-xl tracking-tight">Smart HR</span>
       </div>
       <nav className="flex-1 px-4 space-y-1">
@@ -397,6 +418,13 @@ export default function App() {
         </button>
         <button onClick={() => { setView('dashboard'); loadRecruiterDashboard(); }} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold transition ${view === 'dashboard' ? 'bg-blue-50 text-blue-600' : 'text-slate-500 hover:bg-slate-50'}`}>
           <Briefcase size={20} /> Вакансии
+=======
+        <span className="font-black text-xl tracking-tight">SmartHR</span>
+      </div>
+      <nav className="flex-1 px-4 space-y-1">
+        <button onClick={() => { setView('dashboard'); loadRecruiterDashboard(); }} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold transition ${view === 'dashboard' ? 'bg-blue-50 text-blue-600' : 'text-slate-500 hover:bg-slate-50'}`}>
+          <LayoutDashboard size={20} /> Вакансии
+>>>>>>> eeb8d04d9a6dc05a522b66841f1dd49b88835e8d
         </button>
         <button onClick={() => { setView('templates'); loadTemplates(); }} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold transition ${view === 'templates' ? 'bg-blue-50 text-blue-600' : 'text-slate-500 hover:bg-slate-50'}`}>
           <FileText size={20} /> Шаблоны
@@ -407,7 +435,11 @@ export default function App() {
           <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-600">{user?.email?.[0].toUpperCase()}</div>
           <div className="overflow-hidden"><p className="text-sm font-bold truncate">{user?.email}</p><p className="text-xs text-slate-400">Рекрутер</p></div>
         </div>
+<<<<<<< HEAD
         <button onClick={() => { setUser(null); setView('auth'); setError(null); }} className="w-full flex items-center gap-2 text-red-500 font-bold text-sm px-4 py-2 hover:bg-red-50 rounded-lg transition"><LogOut size={18} /> Выйти</button>
+=======
+        <button onClick={() => setUser(null)} className="w-full flex items-center gap-2 text-red-500 font-bold text-sm px-4 py-2 hover:bg-red-50 rounded-lg transition"><LogOut size={18} /> Выйти</button>
+>>>>>>> eeb8d04d9a6dc05a522b66841f1dd49b88835e8d
       </div>
     </aside>
   );
@@ -425,6 +457,7 @@ export default function App() {
           </div>
         )}
 
+<<<<<<< HEAD
         {/* RECRUITER: OVERVIEW DASHBOARD */}
         {view === 'overview' && (
           <div className="max-w-6xl mx-auto">
@@ -484,6 +517,9 @@ export default function App() {
         )}
 
         {/* RECRUITER: VACANCIES LIST */}
+=======
+        {/* RECRUITER: DASHBOARD */}
+>>>>>>> eeb8d04d9a6dc05a522b66841f1dd49b88835e8d
         {view === 'dashboard' && (
           <div className="max-w-6xl mx-auto">
             <div className="flex justify-between items-end mb-8">
