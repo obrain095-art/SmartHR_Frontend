@@ -417,10 +417,17 @@ export default function App() {
       {user?.role === 'recruiter' && <Sidebar />}
       <main className={`${user?.role === 'recruiter' ? 'pl-72' : ''} p-8`}>
 
-        {user?.role === 'candidate' && view !== 'active_vacancies' && view !== 'auth' && (
-          <div className="max-w-5xl mx-auto mb-6">
-            <button onClick={() => setView('active_vacancies')} className="flex items-center gap-2 text-slate-400 font-bold hover:text-blue-600 transition">
-              <ArrowLeft size={18} /> К списку вакансий
+        {user?.role === 'candidate' && view !== 'auth' && (
+          <div className="max-w-5xl mx-auto mb-6 flex items-center justify-between gap-4">
+            <div>
+              {view !== 'active_vacancies' && (
+                <button onClick={() => setView('active_vacancies')} className="flex items-center gap-2 text-slate-400 font-bold hover:text-blue-600 transition">
+                  <ArrowLeft size={18} /> К списку вакансий
+                </button>
+              )}
+            </div>
+            <button onClick={() => { setUser(null); setView('auth'); setError(null); }} className="flex items-center gap-2 text-red-500 font-bold text-sm px-4 py-2 hover:bg-red-50 rounded-lg transition border border-red-100">
+              <LogOut size={18} /> Выйти
             </button>
           </div>
         )}
